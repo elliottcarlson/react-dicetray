@@ -2,6 +2,7 @@
   "name": "react-dicetray",
   "version": "1.0.0",
   "description": "React 3d Rice Tray Component",
+  "main": "dist/index.js",
   "publishConfig": {
     "access": "restricted"
   },
@@ -29,6 +30,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "^2.8.3",
+    "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/react": "^18.2.6",
     "concurrently": "^8.0.1",
     "express": "^4.18.2",
