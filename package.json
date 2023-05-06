@@ -11,7 +11,7 @@
     "dist": "npm run playground:build:playground && npm run playground:build:loader",
     "build": "parcel build src/index.ts --dist-dir ./dist",
     "cosmos:watch:playground": "parcel serve cosmos/playground/playground.html --public-url /static/playground",
-    "cosmos:watch:loader": "parcel serve cosmos/loader/loader.html --public-url /static/playground/loader",
+    "cosmos:watch:loader": "parcel serve cosmos/loader/loader.html --public-url /static/playground/loader"
   },
   "repository": {
     "type": "git",
