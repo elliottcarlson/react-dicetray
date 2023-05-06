@@ -1,0 +1,49 @@
+{
+  "name": "react-dicetray",
+  "version": "1.0.0",
+  "description": "React 3d Rice Tray Component",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run cosmos:watch:playground\" \"npm run cosmos:watch:loader\" \"nodemon cosmos-server.js\"",
+    "dist": "npm run playground:build:playground && npm run playground:build:loader",
+    "build": "webpack --mode production",
+    "cosmos:watch:playground": "parcel serve cosmos/playground/playground.html --public-url /static/playground",
+    "cosmos:watch:loader": "parcel serve cosmos/loader/loader.html --public-url /static/playground/loader",
+    "playground:build:playground": "parcel build src/playground/playground.html --dist-dir static/playground --public-url /static/playground",
+    "playground:build:loader": "parcel build src/loader/loader.html --dist-dir static/playground/loader --public-url /static/playground/loader"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-cosmos/parcel-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-cosmos/parcel-example/issues"
+  },
+  "homepage": "https://github.com/react-cosmos/parcel-example#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "concurrently": "^8.0.1",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "nodemon": "^2.0.22",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-cosmos": "^5.7.2",
+    "react-cosmos-loader": "^4.8.4",
+    "react-cosmos-playground": "^4.8.5",
+    "react-dom": "^18.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.0.2"
+  }
+}

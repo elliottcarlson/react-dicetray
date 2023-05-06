@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "cosmos",
+    "dist",
+    "node_modules"
+  ]
+}
