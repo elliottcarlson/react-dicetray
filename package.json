@@ -9,11 +9,9 @@
   "scripts": {
     "start": "concurrently --kill-others \"npm run cosmos:watch:playground\" \"npm run cosmos:watch:loader\" \"nodemon cosmos-server.js\"",
     "dist": "npm run playground:build:playground && npm run playground:build:loader",
-    "build": "webpack --mode production",
+    "build": "parcel build src/index.ts --dist-dir ./dist",
     "cosmos:watch:playground": "parcel serve cosmos/playground/playground.html --public-url /static/playground",
     "cosmos:watch:loader": "parcel serve cosmos/loader/loader.html --public-url /static/playground/loader",
-    "playground:build:playground": "parcel build src/playground/playground.html --dist-dir static/playground --public-url /static/playground",
-    "playground:build:loader": "parcel build src/loader/loader.html --dist-dir static/playground/loader --public-url /static/playground/loader"
   },
   "repository": {
     "type": "git",
