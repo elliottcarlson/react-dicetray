@@ -6,7 +6,8 @@ interface IProps {
 }
 interface IState {
 }
-export default class CallSuperHeroButton extends React.Component<IProps, IState> {
+export class CallSuperHeroButton extends React.Component<IProps, IState> {
     render(): React.JSX.Element;
 }
-export {};
+
+//# sourceMappingURL=index.d.ts.map

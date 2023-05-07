@@ -1,28 +1,31 @@
 {
   "name": "react-dicetray",
   "version": "1.0.0",
-  "description": "React 3d Rice Tray Component",
-  "main": "dist/index.js",
-  "publishConfig": {
-    "access": "restricted"
-  },
+  "description": "React 3d Dice Tray Hook and Component",
+  "main": "./dist/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
-    "start": "concurrently --kill-others \"npm run cosmos:watch:playground\" \"npm run cosmos:watch:loader\" \"nodemon cosmos-server.js\"",
-    "dist": "npm run playground:build:playground && npm run playground:build:loader",
-    "build": "parcel build src/index.ts --dist-dir ./dist",
+    "test": "cross-env node_modules/.bin/jest --verbose --no-cache",
+    "cosmos": "concurrently --kill-others \"npm run cosmos:watch:playground\" \"npm run cosmos:watch:loader\" \"nodemon cosmos-server.js\"",
     "cosmos:watch:playground": "parcel serve cosmos/playground/playground.html --public-url /static/playground",
-    "cosmos:watch:loader": "parcel serve cosmos/loader/loader.html --public-url /static/playground/loader"
+    "cosmos:watch:loader": "parcel serve cosmos/loader/loader.html --public-url /static/playground/loader",
+    "clear": "cross-env rm -rf dist/",
+    "build": "parcel build src/index.ts --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-cosmos/parcel-example.git"
+    "url": "git+https://github.com/elliottcarlson/react-dicetray.git"
   },
-  "author": "",
+  "author": "Elliott Carlson <npm@sublim.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-cosmos/parcel-example/issues"
+    "url": "https://github.com/elliottcarlson/react-dicetray/issues"
   },
-  "homepage": "https://github.com/react-cosmos/parcel-example#readme",
+  "homepage": "https://github.com/elliottcarlson/react-dicetray#readme",
+  "types": "./dist/index.d.ts",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -32,8 +35,11 @@
     "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/react": "^18.2.6",
     "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
     "express": "^4.18.2",
     "fs-extra": "^11.1.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "nodemon": "^2.0.22",
     "parcel": "^2.8.3",
     "process": "^0.11.10",
@@ -42,9 +48,34 @@
     "react-cosmos-loader": "^4.8.4",
     "react-cosmos-playground": "^4.8.5",
     "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
     "webpack": "^5.82.0",
     "webpack-cli": "^5.0.2"
-  }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "clearMocks": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "<rootDir>/src/lib/**/*.test.(ts|tsx)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "dice",
+    "3d"
+  ]
 }
