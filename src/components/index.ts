@@ -1,1 +1,1 @@
-export { default as CallSuperHeroButton } from "./CallSuperHeroButton";
+export { default as DiceTray } from "./DiceTray";

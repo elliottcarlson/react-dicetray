@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        "react-cosmos-plugin-webpack"
+    ],
+    "staticPath": "public",
+    "watchDirs": [
+        "src"
+    ],
+    "webpack": {
+        "configPath": "./webpack.config"
+    }
+}
