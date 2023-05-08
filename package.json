@@ -83,8 +83,6 @@
     "3d"
   ],
   "dependencies": {
-    "@3d-dice/dice-box": "^1.0.8",
-    "@3d-dice/dice-box-threejs": "^0.0.12",
-    "@3d-dice/dice-ui": "^0.4.3"
+    "@3d-dice/dice-box": "^1.0.8"
   }
 }

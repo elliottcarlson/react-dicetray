@@ -7,7 +7,7 @@ const useDiceTray = (diceTrayConfig: Partial<DiceTrayConfig> = {}) => {
   const diceTray = <DiceTray ref={ref} {...diceTrayConfig} />;
 
   const rollDice = (notation?: string | Array<string>) => {
-    ref.current?.DiceBox?.roll(notation ?? "1d20");
+    ref.current?.DiceBox?.roll(notation ?? '1d20');
   };
 
   return {

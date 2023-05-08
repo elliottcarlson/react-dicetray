@@ -1,4 +1,4 @@
-import { Roll } from "./types";
+import { Roll } from './types';
 
 export interface DiceTrayConfig {
     assetPath?: string,

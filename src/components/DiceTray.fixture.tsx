@@ -1,7 +1,6 @@
 import React from 'react';
 import DiceTray from './DiceTray';
 import useDiceTray from '../useDiceTray';
-import { useSelect } from 'react-cosmos-renderer/client';
 import { Roll } from '../types';
 
 export default {
@@ -26,7 +25,7 @@ export default {
         scale={6}
         suspendSimulation={false}
         origin={location.origin}
-        onReady={(rollDice) => { rollDice("1d6") }}
+        onReady={(rollDice) => { rollDice('1d6') }}
     />,
     SmallArea: <div style={{ width: '50px', height: '50px', border: '1px solid black' }}><DiceTray
         gravity={10}
@@ -47,12 +46,12 @@ export default {
         theme='cotl'
         themeColor='#2e8555'
         scale={130}
-        onReady={(rollDice) => { rollDice("1d6") }}
+        onReady={(rollDice) => { rollDice('1d6') }}
     /></div>,
     onReady: () => {
         const { diceTray, rollDice } = useDiceTray({
             onReady: () => {
-                rollDice("1d10");
+                rollDice('1d10');
             }
         });
 
@@ -60,7 +59,7 @@ export default {
     },
     onRollComplete: () => {
         const { diceTray, rollDice } = useDiceTray({
-            theme: "cotl",
+            theme: 'cotl',
             scale: 20,
             onRollComplete: (results: Array<Roll>) => {
                 alert(`Total Rolled: ${results[0].value}`);
@@ -69,7 +68,7 @@ export default {
 
         return <>
             {diceTray}
-            <button onClick={() => rollDice("20d6")}>Roll Dice</button>
+            <button onClick={() => rollDice('20d6')}>Roll Dice</button>
         </>;
     }
 };
