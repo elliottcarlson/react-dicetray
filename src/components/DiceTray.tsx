@@ -37,8 +37,6 @@ export default class DiceTray extends React.PureComponent<DiceTrayConfig> {
         );
 
         this.DiceBox.init().then(() => {
-            console.log(this.DiceBox)
-
             if (typeof this.onReady === 'function') this.onReady(this.DiceBox.roll.bind(this.DiceBox));
         });
     }

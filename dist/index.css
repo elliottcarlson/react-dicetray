@@ -3,4 +3,12 @@
   height: 100%;
 }
 
+.react-dicetray > canvas {
+  display: none;
+}
+
+.react-dicetray > canvas:last-child {
+  display: unset;
+}
+
 /*# sourceMappingURL=index.css.map */
