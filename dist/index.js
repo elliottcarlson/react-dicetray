@@ -70,7 +70,6 @@ class $10e67faa42b3666f$export$2e2bcd8739ae039 extends (0, ($parcel$interopDefau
         delete options.onReady;
         this.DiceBox = new (0, ($parcel$interopDefault($8zHUo$3ddicedicebox)))(`#${this.id}`, options);
         this.DiceBox.init().then(()=>{
-            console.log(this.DiceBox);
             if (typeof this.onReady === "function") this.onReady(this.DiceBox.roll.bind(this.DiceBox));
         });
     }
@@ -92,9 +91,13 @@ const $9dc783bf0b8fe400$var$useDiceTray = (diceTrayConfig = {})=>{
     const rollDice = (notation)=>{
         ref.current?.DiceBox?.roll(notation ?? "1d20");
     };
+    const updateConfig = (config)=>{
+        ref.current?.DiceBox?.updateConfig(config);
+    };
     return {
         diceTray: diceTray,
-        rollDice: rollDice
+        rollDice: rollDice,
+        updateConfig: updateConfig
     };
 };
 var $9dc783bf0b8fe400$export$2e2bcd8739ae039 = $9dc783bf0b8fe400$var$useDiceTray;

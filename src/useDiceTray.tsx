@@ -10,7 +10,7 @@ const useDiceTray = (diceTrayConfig: Partial<DiceTrayConfig> = {}) => {
     ref.current?.DiceBox?.roll(notation ?? '1d20');
   };
 
-  const updateConfig = (config: DiceTrayConfig) => {
+  const updateConfig = (config: Partial<DiceTrayConfig>) => {
     ref.current?.DiceBox?.updateConfig(config);
   }
 

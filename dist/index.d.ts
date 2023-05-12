@@ -47,6 +47,7 @@ interface DiceTrayConfig {
 export const useDiceTray: (diceTrayConfig?: Partial<DiceTrayConfig>) => {
     diceTray: React.JSX.Element;
     rollDice: (notation?: string | Array<string>) => void;
+    updateConfig: (config: Partial<DiceTrayConfig>) => void;
 };
 
 //# sourceMappingURL=index.d.ts.map
